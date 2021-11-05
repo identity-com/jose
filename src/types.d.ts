@@ -645,6 +645,11 @@ export interface FlattenedDecryptResult {
    * JWE Per-Recipient Unprotected Header.
    */
   unprotectedHeader?: JWEHeaderParameters
+
+  /**
+   * JWE Content Encryption Key
+   */
+  cek: KeyLike | Uint8Array;
 }
 
 export interface GeneralDecryptResult extends FlattenedDecryptResult {}

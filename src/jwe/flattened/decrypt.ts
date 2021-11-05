@@ -237,7 +237,7 @@ export async function flattenedDecrypt(
     plaintext = await (options?.inflateRaw || inflate)(plaintext)
   }
 
-  const result: FlattenedDecryptResult = { plaintext }
+  const result: FlattenedDecryptResult = { plaintext, cek }
 
   if (jwe.protected !== undefined) {
     result.protectedHeader = parsedProt
